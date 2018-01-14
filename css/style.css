@@ -267,6 +267,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,blockquote,big,body,center,c
 	}
 }
 #loclizer{
+	box-sizing: border-box;
 	width: 100%;
 	background-color: #fff;
 	color:#333;

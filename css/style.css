@@ -314,3 +314,10 @@ body>footer{
 #fool{width: 40%;padding-top: .5em}
 #foor{width: 60%;padding-top: .5em}
 #foob{width: 100%;}
+#hotel,#car{
+	animation: fadeIn 1s;
+}
+@keyframes fadeIn{
+	from{opacity: 0}
+	to{opacity: 1}
+}

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script>
+			//setTimeout(()=>location.reload(),1000)
+		</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>About</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/camera.css"><!--yup-->
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-migrate-1.2.1.js"></script>
+		<script src="js/jquery.ui.totop.js"></script>
+		<script src="js/jquery.equalheights.js"></script>
+		<script src="js/jquery.mobilemenu.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/camera.js"></script>
+		<script src="js/jquery.mobile.customized.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				jQuery('#camera_wrap').camera({
+					loader: false,
+					pagination: false ,
+					minHeight: '444',
+					thumbnails: false,
+					height: '48.375%',
+					caption: true,
+					navigation: true,
+					fx: 'mosaic'
+				});
+				$().UItoTop({ easingType: 'easeOutQuart' });
+			});
+		</script>
+	</head>
+	<body class="page1" id="top">
+		<nav>
+			<b id="menuTag" style="display: none;">Menu</b>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Videos</a></li>
+				<li><a href="#">Bio</a></li>
+				<li><a href="#">Category #2</a></li>
+			</ul>
+		</nav>
+		<div class="slider_wrapper">
+			<div id="camera_wrap" class="">
+				<div data-src="images/slide.jpg">
+					<div class="caption fadeIn">
+						<h2 class="rtitl">LONDON</h2>
+						<div class="price">
+							FROM
+							<span>$1000</span>
+						</div>
+						<a href="#">LEARN MORE</a>
+					</div>
+				</div>
+				<div data-src="images/slide1.jpg">
+					<div class="caption fadeIn">
+						<h2 class="rtitl">Maldives</h2>
+						<div class="price">
+							FROM
+							<span>$2000</span>
+						</div>
+						<a href="#">LEARN MORE</a>
+					</div>
+				</div>
+				<div data-src="images/slide2.jpg">
+					<div class="caption fadeIn">
+						<h2 class="rtitl">Venice</h2>
+						<div class="price">
+							FROM
+							<span>$1600</span>
+						</div>
+						<a href="#">LEARN MORE</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section id="caa">
+			<div id="pickerWrapper">
+				<div>
+					<ul id="hotelCarTabs">
+						<li class="active" onclick="$('#hotelCarTabs li').removeClass('active');this.classList.add('active');document.getElementById('hotel').style.display='block';document.getElementById('car').style.display='none'">
+							<a>Hotel</a>
+						</li>
+						<li onclick="$('#hotelCarTabs li').removeClass('active');this.classList.add('active');document.getElementById('car').style.display='block';document.getElementById('hotel').style.display='none'">
+							<a>Car Rental</a>
+						</li>
+					</ul>
+
+					<!-- Tab panes -->
+					<div>
+						<div id="hotel">
+							<div>
+								<form action="#" method="post" class="hotel-search-form">
+									<div>
+										<div>
+											<select>
+												<option value="">-- Select Hotel -- </option>
+												<option value="shangrila">Shangri-La</option>
+												<option value="chatrium">Chatrium</option>
+												<option value="fourseasons">Seasons</option>
+												<option value="hilton">Hilton</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<div class='input-group date' id='datetimepicker1'>
+												<input type='text' class="form-control" placeholder="Check-in Date" />
+												<span class="input-group-addon">
+													<span class="fa fa-calendar"></span>
+												</span>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class='input-group date' id='datetimepicker2'>
+												<input type='text' class="form-control" placeholder="Check-out Date" />
+												<span class="input-group-addon">
+															<span class="fa fa-calendar"></span>
+												</span>
+											</div>
+										</div>
+										<div class="form-group margin-bottom-0">
+											<select class="form-control">
+														<option value="">-- Guests -- </option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5p">5+</option>
+													</select>
+										</div>
+									</div>
+									<div class="form-group tm-yellow-gradient-bg text-center">
+										<button type="submit" name="submit" class="tm-yellow-btn">Check Now</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div id="car" style="display: none;">
+							<div>
+								<form action="#" method="post">
+									<div>
+										<div>
+											<select class="form-control">
+												<option value="">-- Select Model -- </option>
+												<option value="shangrila">BMW</option>
+												<option value="chatrium">Mercedes-Benz</option>
+												<option value="fourseasons">Toyota</option>
+												<option value="hilton">Honda</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<div class='input-group date-time' id='datetimepicker3'>
+												<input type='text' class="form-control" placeholder="Pickup Date" />
+												<span class="input-group-addon">
+															<span class="fa fa-calendar"></span>
+												</span>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class='input-group date-time' id='datetimepicker4'>
+												<input type='text' class="form-control" placeholder="Return Date" />
+												<span class="input-group-addon">
+															<span class="fa fa-calendar"></span>
+												</span>
+											</div>
+										</div>
+										<div class="form-group">
+											<select class="form-control">
+												<option value="">-- Options -- </option>
+												<option value="">Child Seat</option>
+												<option value="">GPS Navigator</option>
+												<option value="">Insurance</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group tm-yellow-gradient-bg text-center">
+										<button type="submit" name="submit" class="tm-yellow-btn">Check Now</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section>
+				<img src="http://www.clider.com.ar/wp-content/uploads/2014/09/img-promo.png">
+			</section>
+		</section>
+		<div class="boxesss">
+			<div>
+				<figure>
+					<div><img src="https://78.media.tumblr.com/22fbbc8e0376b07b8d3841a10daf2dd7/tumblr_nxbki5z3521sb5osho1_500.gif" alt=""></div>
+					<figcaption>
+						<h3>Venice</h3>
+						a rew qw vehicula lacinia arcufasec ro. Aenean lacinia ucibusy fase tortor ut feugiat.
+						<a href="#" class="btn">Details</a> 
+					</figcaption>
+				</figure>
+			</div>
+			<div>
+				<figure>
+					<div><img src="https://archive-media-0.nyafuu.org/bant/image/1509/49/1509490847377.gif" alt=""></div>
+					<figcaption>
+						<h3>New York</h3>
+						 asec emmodem geteq tiloli. Aliquam dapibus neclol nami wertoli elittro eget vulpoli no
+						<a href="#" class="btn">Details</a> 
+					</figcaption>
+				</figure>
+			</div>
+			<div style="grid-row-start: 1;grid-row-end: 3;">
+				<figure>
+					<div><img src="https://img.buzzfeed.com/buzzfeed-static/static/2016-03/7/14/enhanced/webdr14/anigif_enhanced-26088-1457378888-2.gif?downsize=715:*&output-format=auto&output-quality=auto" alt=""></div>
+					<figcaption>
+						<h3>Paris</h3>
+						cing elitiw qw vehicula lacinia arcufasec ro. Aenean lacinia ucibusy fase tortor ut feugiat.
+						<a href="#" class="btn">Details</a> 
+					</figcaption>
+				</figure>
+			</div>
+			<div style="
+				grid-column-start: 1;
+				grid-column-end: 3;
+				grid-row-start: 2;
+				grid-row-end: 4;">
+				<figure>
+					<div>
+						<img src="https://data.whicdn.com/images/186966245/original.gif" alt=""></div>
+					<figcaption>
+						<h3>Paris</h3>
+						cing elitiw qw vehicula lacinia arcufasec ro. Aenean lacinia ucibusy fase tortor ut feugiat.
+						<a href="#" class="btn">Details</a> 
+					</figcaption>
+				</figure>
+			</div>
+			<div>
+				<figure>
+					<div><img src="https://78.media.tumblr.com/22fbbc8e0376b07b8d3841a10daf2dd7/tumblr_nxbki5z3521sb5osho1_500.gif" alt=""></div>
+					<figcaption>
+						<h3>Paris</h3>
+						cing elitiw qw vehicula lacinia arcufasec ro. Aenean lacinia ucibusy fase tortor ut feugiat.
+						<a href="#" class="btn">Details</a> 
+					</figcaption>
+				</figure>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<h3 id="loclizer">Encuéntranos en:</h3>
+		<div id="googleMap" style="width:100%;height:400px;"></div>
+		<footer>
+			<div id="fool">
+				<h5>Footer Content</h5>
+				<p>You can use rows and columns here to organize your footer content.</p>
+			</div>
+			<div id="foor">
+				<h5>Links</h5>
+				<ul>
+					<li><a href="#">Link 1</a></li>
+					<li><a href="#">Link 2</a></li>
+				</ul>
+			</div>
+			<div id="foob">
+				© 2018 Copyright Bimbolandia
+				<a href="https://evolvetechdev.com">Desarrollado por Evolve Technological Development</a>
+			</div>
+		</footer>
+		<script>
+			function myMap() {
+				let myCenter = new google.maps.LatLng(10.481802,-66.895173)
+				var mapProp = {
+					center:myCenter,
+					zoom:18,
+				}
+				var map = new google.maps.Map(document.getElementById("googleMap"),mapProp)
+
+				var marker = new google.maps.Marker({position:myCenter});
+				marker.setMap(map);
+			}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWwBG-Eu1BNK4jAoAbUzGKqnyeUNt8ocw&callback=myMap"></script>
+		<script>
+			//menu slider in responsive mode
+			(function() {
+				let menu = document.querySelector('nav ul'),
+					button = document.getElementById('menuTag')
+					button.addEventListener('click',function() {
+						if (window.innerWidth < 501) {//check screen size
+							menu.classList.toggle('on')
+						}
+					})
+			})()
+		</script>
+	</body>
+</html>
+<!--AIzaSyDLt4k_Qj2eqE-Z8UrZEadj9iVRqoaUJZw-->

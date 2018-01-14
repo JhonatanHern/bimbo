@@ -119,7 +119,26 @@ a,abbr,acronym,address,applet,article,aside,audio,b,blockquote,big,body,center,c
 			display: flex;
 			align-items: center;
 		}
+		#contact-data{
+			display: flex;
+			justify-content: space-around;
+			background-color: #555;
+			color: #fff;
+		}
+		@media(min-width: 501px){
+			nav img{
+				position: absolute;
+				left: 0;
+				height: 100%;
+			}
+		}
 		@media(max-width: 500px){
+			nav img{
+				display: none;
+			}
+			#contact-data{
+				display: none;
+			}
 			nav{
 				height: 10vh;
 				display: flex;
@@ -278,17 +297,20 @@ a,abbr,acronym,address,applet,article,aside,audio,b,blockquote,big,body,center,c
 }
 body>footer h5{
 	padding-top: 1em;
+	margin-bottom: .3em;
 }
 body>footer{
 	display: flex;
 	background-color: white;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	padding-bottom: 0em;
+	color: #333;
 }
 #fool,#foor,#foob{
 	text-align: center;
 	margin-bottom: 1em;
 }
-#fool{width: 40%;}
-#foor{width: 60%;}
+#fool{width: 40%;padding-top: .5em}
+#foor{width: 60%;padding-top: .5em}
 #foob{width: 100%;}
